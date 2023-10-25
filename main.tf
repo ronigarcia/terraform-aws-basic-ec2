@@ -8,14 +8,14 @@ module "vpc" {
   public_subnets = [
     {
       subnet            = var.public_subnets_cidrBlock
-      availability_zone = "${var.aws_region}-a"
+      availability_zone = "${var.aws_region}a"
     }
   ]
 
   private_subnets = [
     {
       subnet            = var.private_subnets_cidrBlock
-      availability_zone = "${var.aws_region}-a"
+      availability_zone = "${var.aws_region}a"
     }
   ]
 
