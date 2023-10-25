@@ -3,7 +3,7 @@
 
 ## Create env.tfvars
 
-Before to execute terraform change `env.tfvars` inputs.
+Before to execute terraform, you should change the `env.tfvars` inputs.
 
 ## Usage
 
@@ -23,10 +23,10 @@ $ terraform destroy -var-file=env.tfvars
 
 ## Connect Instance
 
-To connect to ec2 public
+To connect to the EC2 public instance, use the following command:
 `ssh -i <output_key_name>.pem ubuntu@<output_ec2_public_ip>`
 
-To connect to ec2 private
+To connect to the EC2 private instance using AWS EC2 Instance Connect, use the following command:
 `ssh -i <output_key_name>.pem ubuntu@<output_ec2_private_id> -o ProxyCommand='aws ec2-instance-connect open-tunnel --instance-id <output_ec2_private_id> --region us-east-1 --profile <profile>'`
 
 ## Providers
